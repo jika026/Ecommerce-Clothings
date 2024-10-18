@@ -1,7 +1,8 @@
 export const ROUTES = Object.freeze({
-  SIGN_UP: "/sign-up",
-  LOGIN: "/login",
-  AUTHENTICATE_USER: "/authentication",
+  HOME: "/",
 
-  HOME: "/home",
+  ACCOUNT: "/account",
+  SIGN_UP: "/account/sign-up",
+  LOGIN: "/account/login",
+  AUTHENTICATE_USER: "/authentication",
 });
