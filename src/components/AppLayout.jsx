@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import TopBar from "./TopBar";
 import Footer from "./Footer";
+import TopBar from "./TopBar";
 
 const AppLayout = () => {
   return (

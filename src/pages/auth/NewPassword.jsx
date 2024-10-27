@@ -1,29 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../components/Button";
 import { AuthLayoutHeader } from "../../components/AuthLayout";
 import { TextInput } from "../../components";
-import "./auth.css";
-import { ROUTES } from "../../routes";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { useUserEmail } from "../../components/AuthContextAPI";
+import { ROUTES } from "../../routes";
 
-const Login = () => {
+const NewPassword = () => {
+  const [error, setError] = useState();
   const navigate = useNavigate();
+  const { userEmail, formData, setFormData } = useUserEmail();
 
-  // const [formData, F] = useState({
-  //   email: "",
+  // const [formData, setformData] = useState({
   //   password: "",
   //   rememberMe: false,
   // });
-  const { formData, setFormData } = useUserEmail();
-
-  const [error, setError] = useState();
 
   const validationSchema = Yup.object({
-    email: Yup.string()
-      .required("Email is required")
-      .email("Invalid email format"),
     password: Yup.string()
       .required("Password is required")
       .min(8, "Password must be at least 8 characters long")
@@ -38,19 +32,52 @@ const Login = () => {
     rememberMe: Yup.boolean(),
   });
 
+  useEffect(() => {
+    if (!userEmail) {
+      navigate(ROUTES.FORGOT_PASSWORD);
+    }
+  }, []);
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   try {
+  //     await validationSchema.validate(
+  //       { email: formData.email },
+  //       { abortEarly: false }
+  //     );
+
+  //     setError({}); // remove all errors when submitting
+  //     alert("Password changed Successfully");
+  //     navigate(ROUTES.HOME);
+  //   } catch (err) {
+  //     const newError = {};
+  //     err.inner.forEach((err) => {
+  //       newError[err.path] = err.message;
+  //     });
+  //     setError(newError);
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      await validationSchema.validate(formData, { abortEarly: false });
-      setError(); //remove all errors when submitting
-      console.log("Form Submitted", formData);
+      await validationSchema.validate(
+        { email: formData.email, password: formData.password },
+        { abortEarly: false }
+      );
+
+      setError({}); // remove all errors when submitting
+      alert("Password changed successfully");
     } catch (err) {
       const newError = {};
 
-      err.inner.forEach((err) => {
-        newError[err.path] = err.message;
-      });
+      if (err.inner) {
+        err.inner.forEach((error) => {
+          newError[error.path] = error.message;
+        });
+      }
 
       setError(newError);
     } finally {
@@ -65,18 +92,19 @@ const Login = () => {
       [name]: type === "checkbox" ? checked : value,
     });
   };
+
   return (
-    <div className="max-w-[551px] w-full">
-      <AuthLayoutHeader title="Welcome Back" subtitle="Log Into Your Account" />
+    <div className="max-w-[551px] w-full py-12 sm:py-[172px]">
+      <AuthLayoutHeader title="Create New Password" />
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col gap-y-4">
           <div className="mb-4 flex flex-col gap-y-3">
             <TextInput
               id="email"
               label="Email Address"
-              type="text"
+              type="email"
               placeholder="Enter Email"
-              value={formData.email}
+              value={userEmail}
               handleFormValue={handleFormValue}
               error={error?.email}
             />
@@ -84,7 +112,7 @@ const Login = () => {
           <div className="mb-4 flex flex-col gap-y-3">
             <TextInput
               id="password"
-              label="Enter Password"
+              label="Email Password"
               type="password"
               placeholder="Enter Password"
               value={formData.password}
@@ -108,33 +136,18 @@ const Login = () => {
               Remember me
             </label>
           </div>
-          <Link
-            to={ROUTES.FORGOT_PASSWORD}
-            className="text-[#F97A05] text-base font-medium font-fontPrimary"
-          >
-            Forgot Password
-          </Link>
         </div>
 
         <div className="mt-12">
           <Button
-            text="Sign In"
+            text="Verify"
             type="submit"
-            className="bg-[#F97A05] text-white font-semibold font-fontPrimary rounded-lg h-[60px] "
+            className="bg-[#F97A05] text-white font-semibold font-fontPrimary rounded-lg h-[60px]"
           />
-          <p className="orText my-4 text-center text-lightGrey w-full flex justify-between items-center">
-            OR
-          </p>
-          <Button
-            text="Continue with Google"
-            type="submit"
-            icon={<i className="fa-brands fa-google"></i>}
-            className="bg-transparent text-darkGrey font-medium font-fontPrimary rounded-lg h-[60px]border-solid border-[1px] border-darkGrey"
-          ></Button>
         </div>
       </form>
     </div>
   );
 };
 
-export default Login;
+export default NewPassword;

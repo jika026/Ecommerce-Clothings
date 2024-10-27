@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="py-20 px-8 bg-[#f0f0f0] flex justify-between">
       <div
         className="max-w-[272px] cursor-pointer"
-        onclick={`window.location.to=${ROUTES.HOME}`}
+        onClick={() => (window.location.href = ROUTES.HOME)}
       >
         <img src="/IMAGES/logo/footerLogo.png" alt="Logo" className="w-full" />
       </div>
@@ -87,22 +87,42 @@ const Footer = () => {
             Get Socials
           </Link>
         </p>
-        <div>
+        <div className="flex gap-x-3">
           <i
-            className="fa-brands fa-facebook-f"
-            onclick="window.open('https://www.facebook.com/kaltus_collectibles', '_blank');"
+            className="fa-brands fa-facebook-f fa-2x"
+            onClick={() =>
+              window.open(
+                "https://www.facebook.com/kaltus_collectibles",
+                "_blank"
+              )
+            }
           ></i>
           <i
-            className="fa-brands fa-instagram"
-            onclick="window.open('https://www.instagram.com/kaltus_collectibles', '_blank');"
+            className="fa-brands fa-instagram fa-2x"
+            onClick={() =>
+              window.open(
+                "https://www.instagram.com/kaltus_collectibles",
+                "_blank"
+              )
+            }
           ></i>
           <i
-            className="fa-brands fa-x-twitter"
-            onclick="window.open('https://www.twitter.com/kaltus_collectibles', '_blank');"
+            className="fa-brands fa-x-twitter fa-2x"
+            onClick={() =>
+              window.open(
+                "https://www.twitter.com/kaltus_collectibles",
+                "_blank"
+              )
+            }
           ></i>
           <i
-            className="fa-brands fa-linkedin"
-            onclick="window.open('https://www.linkedin.com/kaltus_collectibles', '_blank');"
+            className="fa-brands fa-linkedin fa-2x"
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/kaltus_collectibles",
+                "_blank"
+              )
+            }
           ></i>
         </div>
       </div>

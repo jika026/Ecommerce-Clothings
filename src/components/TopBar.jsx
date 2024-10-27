@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./TopBar.css";
+import { ROUTES } from "../routes";
 
 const TopBar = () => {
   const dropDownMenu = document.getElementById("dropDownMenu");
@@ -10,7 +11,7 @@ const TopBar = () => {
   };
   return (
     <header
-      className="flex justify-between items-center px-[2rem] bg-white fixed h-[84px] w-full z-[1000] shadow-black"
+      className="topBarHeader flex justify-between items-center px-[2rem] bg-white fixed h-[84px] w-full z-[1000]"
       style={{ boxShadow: "0 0 10px 0 #000" }}
     >
       <div style={{ width: "20px", height: "20px" }}>
@@ -62,7 +63,7 @@ const TopBar = () => {
         </div>
       </nav>
       <div className="max-w-[130px]">
-        <Link to="index.html">
+        <Link to={ROUTES.HOME}>
           <img src="/IMAGES/logo/mainLogo.svg" alt="LOGO" className="w-full" />
         </Link>
       </div>
@@ -75,7 +76,9 @@ const TopBar = () => {
         />
         <div className="flex gap-x-4 items-center">
           {/* // .icons */}
-          <i className="fa-solid fa-user text-2xl"></i>
+          <Link to={ROUTES.LOGIN}>
+            <i className="fa-solid fa-user text-2xl"></i>
+          </Link>
           <div className="relative">
             {/* .cart-items  */}
             <i className="fa-solid fa-cart-shopping text-2xl"></i>

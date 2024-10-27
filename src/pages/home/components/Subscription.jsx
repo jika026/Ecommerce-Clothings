@@ -29,7 +29,7 @@ const Subscription = () => {
           <input
             type="text"
             placeholder="Enter Your Email Address"
-            className="w-[802px] h-[89px] rounded-2xl border-none outline-none px-4 text-2xl leading-[29.05px] font-fontPrimary text-[#737373]"
+            className="w-[802px] h-[89px] rounded-2xl border-none outline-none px-4 text-2xl leading-[29.05px] font-fontPrimary text-darkGrey"
           />
           <button className="h-[41px] w-[170px] text-base leading-[19.36px] text-white font-semibold bg-[#a40808] border-none outline-none absolute right-5 top-[22px] rounded-lg">
             SUBSCRIBE

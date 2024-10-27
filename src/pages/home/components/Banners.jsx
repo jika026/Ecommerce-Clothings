@@ -21,7 +21,7 @@ const Banners = () => {
           <p style={textStyles} className="leading-[80.16px] mb-4">
             NEW ABAYA
           </p>
-          <button className="font-fontPrimary text-sm border-[1px] border-black px-14 py-3 bg-transparent rounded">
+          <button className="font-fontPrimary font-semibold text-sm border-[1px] border-black px-14 py-3 bg-transparent rounded">
             Shop Now
           </button>
         </div>
@@ -36,7 +36,7 @@ const Banners = () => {
           <p style={textStyles} className="leading-[80.16px] mb-4">
             NEW ARRIVALS
           </p>
-          <button className="font-fontPrimary text-sm border-[1px] border-black px-14 py-3 bg-transparent rounded">
+          <button className="font-fontPrimary font-semibold text-sm border-[1px] border-black px-14 py-3 bg-transparent rounded">
             Shop Now
           </button>
         </div>
