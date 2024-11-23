@@ -10,12 +10,7 @@ import { useUserEmail } from "../../components/AuthContextAPI";
 
 const SignUp = () => {
   const navigate = useNavigate();
-  // const [formData, setFormData] = useState({
-  //   email: "",
-  //   password: "",
-  //   confirmPassword: "",
-  //   agreedToTerm: false,
-  // });
+
   const { formData, setFormData } = useUserEmail();
 
   const [error, setError] = useState();
@@ -50,8 +45,11 @@ const SignUp = () => {
 
     try {
       await validationSchema.validate(formData, { abortEarly: false });
-      setError(); //remove all errors when submitting
+      setError();
       console.log("Form Submitted", formData);
+      setFormData({
+        loggedIn: true,
+      });
       navigate(ROUTES.HOME);
     } catch (err) {
       const newError = {};

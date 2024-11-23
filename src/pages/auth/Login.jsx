@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../components/Button";
 import { AuthLayoutHeader } from "../../components/AuthLayout";
 import { TextInput } from "../../components";
@@ -11,11 +11,6 @@ import { useUserEmail } from "../../components/AuthContextAPI";
 const Login = () => {
   const navigate = useNavigate();
 
-  // const [formData, F] = useState({
-  //   email: "",
-  //   password: "",
-  //   rememberMe: false,
-  // });
   const { formData, setFormData } = useUserEmail();
 
   const [error, setError] = useState();
@@ -45,6 +40,12 @@ const Login = () => {
       await validationSchema.validate(formData, { abortEarly: false });
       setError(); //remove all errors when submitting
       console.log("Form Submitted", formData);
+      setFormData({
+        ...formData,
+        loggedIn: true,
+      });
+
+      navigate(ROUTES.HOME);
     } catch (err) {
       const newError = {};
 
@@ -53,8 +54,6 @@ const Login = () => {
       });
 
       setError(newError);
-    } finally {
-      navigate(ROUTES.HOME);
     }
   };
 
@@ -78,7 +77,7 @@ const Login = () => {
               placeholder="Enter Email"
               value={formData.email}
               handleFormValue={handleFormValue}
-              error={error?.email}
+              error={error?.email || ""}
             />
           </div>
           <div className="mb-4 flex flex-col gap-y-3">

@@ -14,7 +14,7 @@ const TopBar = () => {
       className="topBarHeader flex justify-between items-center px-[2rem] bg-white fixed h-[84px] w-full z-[1000]"
       style={{ boxShadow: "0 0 10px 0 #000" }}
     >
-      <div style={{ width: "20px", height: "20px" }}>
+      <div className="hover:cursor-pointer">
         <i
           className="fa-solid fa-bars hamburger text-3xl"
           id="hamburger"

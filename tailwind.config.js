@@ -9,6 +9,7 @@ export default {
       },
       fontFamily: {
         fontPrimary: ["Inter", "sans-serif"],
+        fontSecondary: ["HeadlandOne", "sans-serif"],
       },
     },
   },

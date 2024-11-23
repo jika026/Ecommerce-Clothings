@@ -1,0 +1,7 @@
+.products-title p::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 60%;
+  background-image: linear-gradient(to right, #f30202, #f97a05);
+}

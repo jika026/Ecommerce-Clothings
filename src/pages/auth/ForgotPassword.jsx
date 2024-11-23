@@ -12,8 +12,6 @@ const ForgotPassword = () => {
   const [error, setError] = useState("");
   const { userEmail, setUserEmail } = useUserEmail();
 
-  // const [userEmail, setUserEmail] = useState("");
-
   const validationSchema = Yup.object({
     email: Yup.string()
       .required("Email is required")
@@ -24,30 +22,27 @@ const ForgotPassword = () => {
     e.preventDefault();
 
     try {
-      await validationSchema.validate(
-        { email: userEmail },
-        { abortEarly: false }
-      );
+      await validationSchema.validate({ email: userEmail });
 
-      setError({}); // remove all errors when submitting
+      setError("");
       console.log(
         "Email Submitted Successfully",
         "userEmail:" + "" + userEmail
       );
       navigate(ROUTES.VERIFY_USER);
     } catch (err) {
-      const newError = {};
-      err.inner.forEach((err) => {
-        newError[err.path] = err.message;
-      });
-      setError(newError);
+      setError(err.errors[0]);
+      console.log("Validation Email Error:", err.errors[0]);
     }
   };
 
-  const handleFormValue = (e) => {
+  const handleFormValue2 = (e) => {
     setUserEmail(e.target.value);
   };
-
+  const handleFormValue = (e) => {
+    const { name, value } = e.target;
+    setUserEmail(value);
+  };
   return (
     <div className="max-w-[551px] w-full pt-16 pb-8 sm:pey-[172px]">
       <AuthLayoutHeader title="Forgot Password?" />
@@ -62,8 +57,8 @@ const ForgotPassword = () => {
               id="email"
               type="text"
               placeholder="Enter Email"
-              error={error}
-              value={userEmail || ""}
+              error={error || ""}
+              value={userEmail}
               handleFormValue={handleFormValue}
             />
           </div>

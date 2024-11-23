@@ -12,6 +12,7 @@ export const UserEmailProvider = ({ children }) => {
     password: "",
     confirmPassword: "",
     agreedToTerm: false,
+    loggedIn: false,
   });
 
   return (

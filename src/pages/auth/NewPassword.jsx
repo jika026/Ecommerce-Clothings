@@ -12,11 +12,6 @@ const NewPassword = () => {
   const navigate = useNavigate();
   const { userEmail, formData, setFormData } = useUserEmail();
 
-  // const [formData, setformData] = useState({
-  //   password: "",
-  //   rememberMe: false,
-  // });
-
   const validationSchema = Yup.object({
     password: Yup.string()
       .required("Password is required")
@@ -38,27 +33,6 @@ const NewPassword = () => {
     }
   }, []);
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   try {
-  //     await validationSchema.validate(
-  //       { email: formData.email },
-  //       { abortEarly: false }
-  //     );
-
-  //     setError({}); // remove all errors when submitting
-  //     alert("Password changed Successfully");
-  //     navigate(ROUTES.HOME);
-  //   } catch (err) {
-  //     const newError = {};
-  //     err.inner.forEach((err) => {
-  //       newError[err.path] = err.message;
-  //     });
-  //     setError(newError);
-  //   }
-  // };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -68,7 +42,7 @@ const NewPassword = () => {
         { abortEarly: false }
       );
 
-      setError({}); // remove all errors when submitting
+      setError("");
       alert("Password changed successfully");
     } catch (err) {
       const newError = {};

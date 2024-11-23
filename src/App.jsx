@@ -10,6 +10,7 @@ import NewPassword from "./pages/auth/NewPassword";
 import Verification from "./pages/auth/Verification";
 import ForgotPassword from "./pages/auth/ForgotPassword";
 import { UserEmailProvider } from "./components/AuthContextAPI";
+import Products from "./pages/products";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<AppLayout />}>
             <Route path={ROUTES.HOME} element={<Home />} />
+            <Route path={ROUTES.PRODUCTS} element={<Products />} />
           </Route>
           <Route element={<AuthRoutes />}>
             <Route path={ROUTES.LOGIN} element={<Login />} />

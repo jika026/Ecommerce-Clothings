@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../../routes.js";
 
 const Hero = () => {
   const descriptionHeaderStyles = {
@@ -6,6 +8,7 @@ const Hero = () => {
     backgroundImage: "linear-gradient(to right, #f80000, #ff7c02)",
   };
 
+  const navigate = useNavigate();
   return (
     <section
       className="h-screen bg-cover bg-no-repeat bg-center"
@@ -33,6 +36,9 @@ const Hero = () => {
         <button
           className="font-fontPrimary text-white rounded-md font-bold border-none px-10 py-4 bg-[#f97a05] leading-5"
           style={{ fontSize: "clamp(12px, 3vw, 22px)" }}
+          onClick={() => {
+            navigate(ROUTES.PRODUCTS);
+          }}
         >
           Shop Now
         </button>
