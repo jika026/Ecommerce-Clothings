@@ -2,7 +2,7 @@ import React from "react";
 
 const PaymentInfo = () => {
   return (
-    <div className=" bg-[#f4f4f4] flex-[0.25] p-10 rounded-3xl h-max">
+    <div className=" bg-[#f4f4f4] flex-[0.2] p-10 rounded-3xl h-max">
       <h3 className="font-semibold text-4xl leading-8 font-fontPrimary text-center mt-2 mb-4">
         Payment Info
       </h3>

@@ -25,7 +25,7 @@ const CartListing = () => {
   );
 
   return (
-    <div className="flex-[0.75] rounded-3xl bg-[#fcfcfc]  overflow-hidden">
+    <div className="flex-[0.8] rounded-3xl bg-[#fcfcfc]  overflow-hidden">
       <table className="w-full">
         <thead>
           <tr className="border-b-[1px] border-[#000]">
