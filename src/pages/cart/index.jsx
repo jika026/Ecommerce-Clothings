@@ -1,9 +1,9 @@
 import React from "react";
-import ProductSideBar from "./components/ProductSideBar";
-import FilteredProducts from "./components/FilteredProducts";
+import PaymentInfo from "./components/PaymentInfo";
+import CartListing from "./components/CartListing";
 import { useNavigate } from "react-router-dom";
 
-const Products = () => {
+const Cart = () => {
   const navigate = useNavigate();
 
   const goBack = () => {
@@ -16,7 +16,7 @@ const Products = () => {
         style={{ backgroundImage: "url(/IMAGES/CartHeroBanner.png)" }}
       >
         <h3 className="font-bold text-[45px] leading-9 text-white mt-20">
-          Products
+          Shopping Cart
         </h3>
       </div>
       <div
@@ -27,11 +27,11 @@ const Products = () => {
         <p>Back</p>
       </div>
       <div className="flex mx-16 gap-x-12">
-        <ProductSideBar />
-        <FilteredProducts />
+        <CartListing />
+        <PaymentInfo />
       </div>
     </div>
   );
 };
 
-export default Products;
+export default Cart;

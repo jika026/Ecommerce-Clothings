@@ -6,4 +6,5 @@ export const ROUTES = Object.freeze({
   CHANGE_PASSWORD: "/auth/change-password",
   FORGOT_PASSWORD: "/auth/forgot-password",
   PRODUCTS: "/products",
+  SHOPPING_CART: "/cart",
 });

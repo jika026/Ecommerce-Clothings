@@ -17,7 +17,7 @@ const products = [
   { image: image6, title: "BESPOKE DRESS", price: 500.0 },
 ];
 
-const HomeProducts = ({ header }) => {
+const HomeProducts = ({ header, Home = true }) => {
   const shuffleProducts = (array) => {
     const shuffled = [...array];
     for (let i = shuffled.length - 1; i > 0; i--) {
@@ -47,6 +47,7 @@ const HomeProducts = ({ header }) => {
                 image={product.image}
                 title={product.title}
                 price={product.price}
+                Home={Home}
               />
             ))
           : trendingProducts.map((product, index) => (
@@ -55,6 +56,7 @@ const HomeProducts = ({ header }) => {
                 image={product.image}
                 title={product.title}
                 price={product.price}
+                Home={Home}
               />
             ))}
       </section>

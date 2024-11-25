@@ -68,20 +68,19 @@ const TopBar = () => {
         </Link>
       </div>
       <div className="info flex items-center gap-x-12">
-        {/* // .info */}
         <input
           type="text"
           className="w-[280px] h-[32px] lg:w-[342px] lg:h-[45px] rounded-2xl p-2 outline-none border-none bg-[#f1f1f1]"
           placeholder="Search"
         />
         <div className="flex gap-x-4 items-center">
-          {/* // .icons */}
           <Link to={ROUTES.LOGIN}>
             <i className="fa-solid fa-user text-2xl"></i>
           </Link>
           <div className="relative">
-            {/* .cart-items  */}
-            <i className="fa-solid fa-cart-shopping text-2xl"></i>
+            <Link to={ROUTES.SHOPPING_CART}>
+              <i className="fa-solid fa-cart-shopping text-2xl"></i>
+            </Link>
             <div className="absolute top-0 left-3/4 w-[10px] h-[10px] rounded-[50%] bg-[#fe0c0c] flex justify-center items-center p-[2px]">
               <p className="text-[8px] font-bold font-serif text-white">0</p>
             </div>

@@ -27,7 +27,7 @@ const ProductSideBar = () => {
         </h2>
         <div className="rounded-2xl p-8 border-[1px] border-[#a6a6a6]">
           <h3 className="font-medium text-[28px] leading-6 mb-4">Category</h3>
-          <div className="flex flex-col gap-y-4">
+          <form className="flex flex-col gap-y-4">
             {productFilterOptions.map((productFilterOption, index) => (
               <FilterOptions
                 key={index}
@@ -36,7 +36,7 @@ const ProductSideBar = () => {
                 setSelectedCategory={setSelectedCategory}
               />
             ))}
-          </div>
+          </form>
         </div>
       </div>
       <div>
