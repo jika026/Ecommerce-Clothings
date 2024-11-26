@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const SIngleProductDetails = () => {
+const SingleProductDetails = () => {
+  const [quantity, setQuantity] = useState(0);
+
   const navigate = useNavigate();
 
   const goBack = () => {
     navigate(-1);
+  };
+
+  const handleIncrement = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  };
+  const handleDecrement = () => {
+    setQuantity((prevQuantity) => Math.max(prevQuantity - 1, 0));
   };
   return (
     <div>
@@ -102,16 +111,22 @@ const SIngleProductDetails = () => {
             <p
               className="operation bg-white  w-[26px] h-[26px] rounded-[13px] flex justify-center text-2xl cursor-pointer"
               id="decrement"
+              onClick={handleDecrement}
             >
               -
             </p>
             <p className="text-2xl" id="quantity-value">
-              1
+              {quantity}
             </p>
-            <p className="operation" id="increment">
+            <p
+              className="operation  bg-white  w-[26px] h-[26px] rounded-[13px] flex justify-center text-2xl cursor-pointer"
+              id="increment"
+              onClick={handleIncrement}
+            >
               +
             </p>
           </div>
+
           <div className="buttons flex gap-x-12 mt-4">
             <button className="font-fontPrimary font-bold text-lg py-4 px-[34px] rounded-md border-none bg-[#f97a05] text-white">
               Buy Now
@@ -126,4 +141,4 @@ const SIngleProductDetails = () => {
   );
 };
 
-export default SIngleProductDetails;
+export default SingleProductDetails;
