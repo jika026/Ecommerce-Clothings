@@ -11,11 +11,7 @@ const TopBar = () => {
       dropDownMenuRef.current.classList.toggle("show");
     }
   };
-  // const dropDownMenu = document.getElementById("dropDownMenu");
 
-  // const hamburgerClick = () => {
-  //   dropDownMenu.classList.toggle("show");
-  // };
   return (
     <header
       className="topBarHeader flex justify-between items-center px-[2rem] bg-white fixed h-[84px] w-full z-[1000]"
