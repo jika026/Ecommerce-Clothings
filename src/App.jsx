@@ -12,6 +12,7 @@ import ForgotPassword from "./pages/auth/ForgotPassword";
 import { UserEmailProvider } from "./components/AuthContextAPI";
 import Products from "./pages/products";
 import Cart from "./pages/cart";
+import SIngleProductDetails from "./pages/products/components/SIngleProductDetails";
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
           <Route path="/" element={<AppLayout />}>
             <Route path={ROUTES.HOME} element={<Home />} />
             <Route path={ROUTES.PRODUCTS} element={<Products />} />
+            <Route
+              path={ROUTES.SINGLE_PRODUCTS}
+              element={<SIngleProductDetails />}
+            />
             <Route path={ROUTES.SHOPPING_CART} element={<Cart />} />
           </Route>
           <Route element={<AuthRoutes />}>

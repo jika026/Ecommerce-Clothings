@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import "./TopBar.css";
 import { ROUTES } from "../routes";
 
 const TopBar = () => {
-  const dropDownMenu = document.getElementById("dropDownMenu");
+  const dropDownMenuRef = useRef(null);
 
   const hamburgerClick = () => {
-    dropDownMenu.classList.toggle("show");
+    if (dropDownMenuRef.current) {
+      dropDownMenuRef.current.classList.toggle("show");
+    }
   };
+  // const dropDownMenu = document.getElementById("dropDownMenu");
+
+  // const hamburgerClick = () => {
+  //   dropDownMenu.classList.toggle("show");
+  // };
   return (
     <header
       className="topBarHeader flex justify-between items-center px-[2rem] bg-white fixed h-[84px] w-full z-[1000]"
@@ -22,6 +29,7 @@ const TopBar = () => {
         ></i>
       </div>
       <nav
+        ref={dropDownMenuRef}
         id="dropDownMenu"
         className={`h-[350px] w-[300px] flex-col justify-between px-6 pt-4 pb-8 z-[1001] absolute top-[83px] left-6 bg-white`}
       >

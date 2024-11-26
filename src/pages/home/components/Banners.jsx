@@ -19,7 +19,7 @@ const Banners = () => {
         />
         <div className="px-8 absolute top-[40%] flex flex-col items-center right-[0vmax]">
           <p style={textStyles} className="leading-[80.16px] mb-4">
-            NEW ABAYA
+            ONGOING SALES
           </p>
           <button className="font-fontPrimary font-semibold text-sm border-[1px] border-black px-14 py-3 bg-transparent rounded">
             Shop Now
