@@ -8,7 +8,9 @@ const AppLayout = () => {
   return (
     <>
       <TopBar />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Qualities />
       <Footer />
     </>

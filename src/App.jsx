@@ -13,6 +13,7 @@ import { UserEmailProvider } from "./components/AuthContextAPI";
 import Products from "./pages/products";
 import Cart from "./pages/cart";
 import SingleProductDetails from "./pages/products/components/SIngleProductDetails";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route path={ROUTES.VERIFY_USER} element={<Verification />} />
             <Route path={ROUTES.FORGOT_PASSWORD} element={<ForgotPassword />} />
           </Route>
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Router>
     </UserEmailProvider>

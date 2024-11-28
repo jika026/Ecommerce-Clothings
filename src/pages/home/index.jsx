@@ -31,7 +31,6 @@ const Home = () => {
       </section>
       <Testimonials />
       <Subscription />
-      <Qualities />
     </div>
   );
 };

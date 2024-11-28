@@ -88,13 +88,6 @@ export default CartListing;
 export const ProductInCart = ({ image, title, price, updateSubtotal }) => {
   const [quantity, setQuantity] = useState(0);
 
-  // const handleIncrement = () => {
-  //   setQuantity((prevQuantity) => prevQuantity + 1);
-  // };
-  // const handleDecrement = () => {
-  //   setQuantity((prevQuantity) => Math.max(prevQuantity - 1, 0));
-  // };
-
   const handleIncrement = () => {
     const newQuantity = quantity + 1;
     setQuantity(newQuantity);
