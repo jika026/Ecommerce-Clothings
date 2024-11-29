@@ -42,6 +42,7 @@ const PaymentInfo = () => {
                 type="text"
                 className="h-[43px] text-[28px] leading-6  font-semibold font-fontPrimary px-4 placeholder-black tracking-[0.2em]"
                 placeholder="**********"
+                maxLength={16}
               />
             </div>
             <div className="flex justify-between mb-8">
@@ -53,6 +54,7 @@ const PaymentInfo = () => {
                   type="text"
                   className="h-[43px] max-w-[188px] w-full text-xl leading-4 font-fontPrimary text-[#737373] tracking-[0.2em] text-center"
                   placeholder="mm | dd | yr"
+                  maxLength={8}
                 />
               </div>
               <div className="flex flex-col gap-y-4">
@@ -63,6 +65,7 @@ const PaymentInfo = () => {
                   type="text"
                   className="h-[43px] max-w-[96px] w-full  text-[28px] leading-6  font-semibold font-fontPrimary px-4 placeholder-black tracking-[0.2em] text-center"
                   placeholder="***"
+                  maxLength={3}
                 />
               </div>
             </div>

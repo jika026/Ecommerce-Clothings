@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import image1 from "/IMAGES/jalabiya1.png";
-import image2 from "/IMAGES/jalabiya2.png";
-import image3 from "/IMAGES/abaya1.png";
-import image4 from "/IMAGES/abaya2.png";
-import image5 from "/IMAGES/abayaFour.png";
-import image6 from "/IMAGES/abayaOne.png";
 import SingleProduct from "../../home/components/SingleProduct";
 import "./SingleProductDetails.css";
 import RatingChart from "./RatingChart";
+import image1 from "/IMAGES/jalabiya1.png";
+import image2 from "/IMAGES/jalabiya2.png";
+import image3 from "/IMAGES/abaya1.webp";
+import image4 from "/IMAGES/abaya2.webp";
+import image5 from "/IMAGES/abaya3.webp";
+import image6 from "/IMAGES/abaya4.webp";
 
 const products = [
   { image: image1, title: "ABAYA", price: 150.0 },

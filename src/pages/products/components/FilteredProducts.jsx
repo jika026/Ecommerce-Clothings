@@ -1,13 +1,13 @@
 import React from "react";
+import SingleProduct from "../../home/components/SingleProduct";
 import image1 from "/IMAGES/jalabiya1.png";
 import image2 from "/IMAGES/jalabiya2.png";
-import image3 from "/IMAGES/abaya1.png";
-import image4 from "/IMAGES/abaya2.png";
-import image5 from "/IMAGES/abayaFour.png";
-import image6 from "/IMAGES/abayaOne.png";
-import image8 from "/IMAGES/abayaTwo.png";
-import image9 from "/IMAGES/abayaThree.png";
-import SingleProduct from "../../home/components/SingleProduct";
+import image3 from "/IMAGES/abaya1.webp";
+import image4 from "/IMAGES/abaya2.webp";
+import image5 from "/IMAGES/abaya3.webp";
+import image6 from "/IMAGES/abaya4.webp";
+import image8 from "/IMAGES/abayaTwo.webp";
+import image9 from "/IMAGES/abayaThree.webp";
 
 const products = [
   { image: image1, title: "ABAYA", price: 150.0 },
@@ -22,7 +22,6 @@ const products = [
 ];
 
 const FilteredProducts = () => {
-  console.log(products);
   const shuffleArray = (array) => {
     const shuffled = [...array];
     for (let i = shuffled.length - 1; i > 0; i--) {

@@ -6,7 +6,7 @@ const Qualities = () => {
       className="m-16 grid gap-x-12 gap-y-[1.4rem]"
       style={{ gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))" }}
     >
-      <div className="flex items-center w-full justify-center">
+      <div className="flex items-center w-max justify-center">
         <i className="fa-solid fa-truck text-[21px] bg-[#F97A05] p-2 rounded-lg"></i>
         <p
           className="font-fontPrimary ml-[0.335rem]"
@@ -15,7 +15,7 @@ const Qualities = () => {
           Seven Day Shipping
         </p>
       </div>
-      <div className="flex items-center w-full justify-center">
+      <div className="flex items-center w-max justify-center">
         <i className="fa-solid fa-money-bills text-[21px] bg-[#F97A05] p-2 rounded-lg"></i>
         <p
           className="font-fontPrimary ml-[0.335rem]"
@@ -24,7 +24,7 @@ const Qualities = () => {
           Secure Payments
         </p>
       </div>
-      <div className="flex items-center w-full justify-center">
+      <div className="flex items-center w-max justify-center">
         <i className="fa-solid fa-money-bill text-[21px] bg-[#F97A05] p-2 rounded-lg"></i>
         <p
           className="font-fontPrimary ml-[0.335rem]"
@@ -33,7 +33,7 @@ const Qualities = () => {
           Money Gurantee
         </p>
       </div>
-      <div className="flex items-center w-full justify-center">
+      <div className="flex items-center w-max justify-center">
         <i className="fa-solid fa-stopwatch text-[21px] bg-[#F97A05] p-2 rounded-lg"></i>
         <p
           className="font-fontPrimary ml-[0.335rem]"

@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 const CartListing = () => {
   const items = [
-    { image: "/IMAGES/abayaThree.png", title: "Dubai Abaya 1", price: 150.0 },
-    { image: "/IMAGES/abayaOne.png", title: "Dubai Abaya 2", price: 120.0 },
-    { image: "/IMAGES/abayaTwo.png", title: "Dubai Abaya 3", price: 170.0 },
-    { image: "/IMAGES/abaya1.png", title: "Dubai Abaya 4", price: 250.0 },
+    { image: "/IMAGES/abayaThree.webp", title: "Dubai Abaya 1", price: 150.0 },
+    { image: "/IMAGES/abaya3.webp", title: "Dubai Abaya 2", price: 120.0 },
+    { image: "/IMAGES/abayaTwo.webp", title: "Dubai Abaya 3", price: 170.0 },
+    { image: "/IMAGES/abaya1.webp", title: "Dubai Abaya 4", price: 250.0 },
   ];
   const [subtotals, setSubtotals] = useState(Array(items.length).fill(0));
 

@@ -4,7 +4,7 @@ import { ROUTES } from "../routes";
 
 const Footer = () => {
   return (
-    <footer className="py-20 px-8 bg-[#f0f0f0] flex flex-col md:flex-row justify-between ">
+    <footer className="py-20 px-8 bg-[#f0f0f0] flex flex-col sm:flex-row justify-between ">
       <div
         className="max-w-[272px] cursor-pointer"
         onClick={() => (window.location.href = ROUTES.HOME)}
