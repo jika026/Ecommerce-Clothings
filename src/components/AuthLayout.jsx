@@ -13,11 +13,11 @@ const AuthLayout = ({ children, hideLeftLayout, SignUp }) => {
     >
       {!hideLeftLayout && <LayoutLeft SignUp={SignUp} />}
       <div
-        className={`relative  ${
+        className={`relative  p-5 grid place-items-center mx-auto ${
           hideLeftLayout
             ? "flex-1"
             : "flex-1 sm:flex-[0.75] md:flex-[0.55] lg:flex-[0.45] bg-transparent md:bg-white"
-        } p-5 grid place-items-center mx-auto`}
+        }`}
       >
         <div
           className={`lg:max-w-[500px] w-full grid place-items-center  ${hideLeftLayout ? "bg-white !max-w-[864px] w-full h-fit px-[2rem]" : ""} `}

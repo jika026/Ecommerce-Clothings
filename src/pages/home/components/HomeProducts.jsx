@@ -3,8 +3,8 @@ import SingleProduct from "./SingleProduct";
 import "./HomeProducts.css";
 import image1 from "/IMAGES/jalabiya1.png";
 import image2 from "/IMAGES/jalabiya2.png";
-import image3 from "/IMAGES/abaya1.png";
-import image4 from "/IMAGES/abaya2.png";
+import image3 from "/IMAGES/abaya1.webp";
+import image4 from "/IMAGES/abaya2.webp";
 import image5 from "/IMAGES/abayaFour.png";
 import image6 from "/IMAGES/abayaOne.png";
 
