@@ -27,7 +27,7 @@ const TopBar = () => {
       <nav
         ref={dropDownMenuRef}
         id="dropDownMenu"
-        className={`h-[350px] w-[300px] flex-col justify-between px-6 pt-4 pb-8 z-[1001] absolute top-[83px] left-6 bg-white`}
+        className={`h-[300px] sm:h-[350px] w-[230px] sm:w-[300px] flex-col justify-between px-6 pt-4 pb-8 z-[1001] absolute top-[83px] left-6 bg-white`}
       >
         <ul className="flex flex-col gap-y-2">
           <li className="text-[22px] cursor-pointer list-none font-serif">

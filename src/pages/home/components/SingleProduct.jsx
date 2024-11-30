@@ -2,7 +2,7 @@ import React from "react";
 
 const SingleProduct = ({ image, title, price, Home }) => {
   return (
-    <div className="flex flex-col bg-gray-100 px-4 md:px-6 pt-6 pb-3 rounded-2xl shadow-lg justify-between h-auto">
+    <div className="flex flex-col bg-gray-100 px-2 sm:px-4 md:px-6 pt-6 pb-3 rounded-2xl shadow-lg justify-between h-auto">
       <div className="self-center py-4 flex justify-center items-center w-full h-[50vw] sm:h-[40vw] md:h-[30vw] lg:h-[25vw]">
         <img
           src={image}

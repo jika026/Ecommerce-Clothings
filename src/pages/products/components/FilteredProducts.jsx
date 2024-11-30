@@ -32,10 +32,10 @@ const FilteredProducts = () => {
   };
   const shuffledProducts = shuffleArray(products).slice(0, 9);
   return (
-    <section className="flex-[0.8]">
+    <section className="flex-[0.8] ">
       <section
         className="grid gap-x-6 gap-y-12"
-        style={{ gridTemplateColumns: "repeat(auto-fit, minmax(380px, 1fr))" }}
+        style={{ gridTemplateColumns: "repeat(auto-fit, minmax(330px, 1fr))" }}
       >
         {shuffledProducts.map((product, index) => (
           <SingleProduct

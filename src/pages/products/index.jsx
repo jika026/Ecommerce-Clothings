@@ -20,15 +20,19 @@ const Products = () => {
         </h3>
       </div>
       <div
-        className="flex gap-x-2 items-center text-[28px] leading-6 font-fontPrimary my-6 mx-16"
+        className="flex gap-x-2 items-center text-[28px] leading-6 font-fontPrimary my-6 mx-8 md:mx-16"
         onClick={goBack}
       >
         <i className="fa-solid fa-caret-left"></i>
         <p>Back</p>
       </div>
-      <div className="flex mx-16 gap-x-12">
-        <ProductSideBar />
-        <FilteredProducts />
+      <div className="flex mx-8 md:mx-16 gap-x-12">
+        <div className="hidden md:block">
+          <ProductSideBar />
+        </div>
+        <div>
+          <FilteredProducts />
+        </div>
       </div>
     </div>
   );

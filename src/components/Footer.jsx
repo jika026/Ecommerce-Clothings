@@ -83,7 +83,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="flex flex-col gap-y-4">
+      <div className="mt-8 self-center sm:self-auto sm:mt-0 flex flex-col gap-y-4">
         <p className="no-underline text-black">
           <Link className="no-underline text-black" to="#">
             Get Socials
