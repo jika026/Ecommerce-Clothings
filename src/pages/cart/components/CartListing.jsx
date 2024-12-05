@@ -25,20 +25,20 @@ const CartListing = () => {
   );
 
   return (
-    <div className="flex-[0.8] rounded-3xl bg-[#fcfcfc]  overflow-hidden">
+    <div className="flex-[0.8] rounded-3xl bg-[#fcfcfc]  overflow-scroll">
       <table className="w-full">
         <thead>
           <tr className="border-b-[1px] border-[#000]">
-            <th className="font-fontPrimary text-[28px] leading-6 uppercase font-normal pt-12 pb-2 text-start">
+            <th className="font-fontPrimary text-[28px] leading-6 uppercase font-normal pt-12 pb-2 text-center">
               product
             </th>
-            <th className="font-fontPrimary text-[28px] leading-6 uppercase font-normal pt-12 pb-2 text-start">
+            <th className="font-fontPrimary text-[28px] leading-6 uppercase font-normal pt-12 pb-2 text-center">
               quantity
             </th>
-            <th className="font-fontPrimary text-[28px] leading-6 uppercase font-normal pt-12 pb-2 text-start">
+            <th className="font-fontPrimary text-[28px] leading-6 uppercase font-normal pt-12 pb-2 text-center">
               Price
             </th>
-            <th className="font-fontPrimary text-[28px] leading-6 uppercase font-normal pt-12 pb-2 text-start">
+            <th className="font-fontPrimary text-[28px] leading-6 uppercase font-normal pt-12 pb-2 text-center">
               subtotal
             </th>
           </tr>
@@ -101,7 +101,7 @@ export const ProductInCart = ({ image, title, price, updateSubtotal }) => {
   };
   return (
     <tr>
-      <td className="py-4 font-fontPrimary text-2xl leading-5 text-center font-semibold">
+      <td className="py-4 px-4 font-fontPrimary text-2xl leading-5 text-center font-semibold">
         <div className="flex items-center gap-x-4 ml-8">
           <div className="w-[100px] h-[80px] bg-[#F1EBE6] rounded-[5px] p-1">
             <img src={image} alt="productImage" className="w-full h-full" />
@@ -110,7 +110,7 @@ export const ProductInCart = ({ image, title, price, updateSubtotal }) => {
           <p>{title}</p>
         </div>
       </td>
-      <td className="py-4">
+      <td className="py-4 px-2">
         <div className="quantity flex gap-x-3 bg-[#404040] w-fit px-4 py-2 items-center rounded-[33px]">
           <p
             className="operation bg-white w-[26px] h-[26px] rounded-[13px] flex justify-center items-center text-2xl cursor-pointer"
@@ -130,10 +130,10 @@ export const ProductInCart = ({ image, title, price, updateSubtotal }) => {
           </p>
         </div>
       </td>
-      <td className="font-fontPrimary text-2xl leading-5 text-start font-normal py-4">
+      <td className="font-fontPrimary text-2xl leading-5 text-start font-normal py-4 px-2">
         ${price.toFixed(2)}
       </td>
-      <td className="font-fontPrimary text-2xl leading-5 text-start font-normal py-4">
+      <td className="font-fontPrimary text-2xl leading-5 text-start font-normal py-4 px-2">
         ${(quantity * price).toFixed(2)}
       </td>
     </tr>

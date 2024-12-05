@@ -20,7 +20,7 @@ const ProductSideBar = () => {
     "Male Cap",
   ];
   return (
-    <div className="flex-[0.20] space-y-8 sticky top-0 h-screen">
+    <div className="flex-[0.20] space-y-8 h-screen">
       <div>
         <h2 className="font-semibold text-4xl leading-8 font-fontPrimary mb-6">
           Filter Option
@@ -44,7 +44,7 @@ const ProductSideBar = () => {
           Price Range
         </h2>
         <div className="flex flex-col items-center">
-          <div className="relative w-80 self-center">
+          <div className=" w-80 self-center">
             <input
               type="range"
               min="0"

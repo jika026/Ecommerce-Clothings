@@ -26,7 +26,7 @@ const Cart = () => {
         <i className="fa-solid fa-caret-left"></i>
         <p>Back</p>
       </div>
-      <div className="flex xl:flex-row flex-col mx-16 gap-12">
+      <div className="flex xl:flex-row flex-col mx-4 sm:mx-8 md:mx-16 gap-12">
         <CartListing />
         <PaymentInfo />
       </div>

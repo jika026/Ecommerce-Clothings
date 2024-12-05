@@ -3,16 +3,16 @@ import React from "react";
 const PaymentInfo = () => {
   return (
     <div className=" bg-[#f4f4f4] flex-[0.2] p-10 rounded-3xl h-max">
-      <h3 className="font-semibold text-4xl leading-8 font-fontPrimary text-center mt-2 mb-4">
+      <h3 className="font-semibold text-3xl sm:text-4xl leading-8 font-fontPrimary text-center mt-1 sm:mt-2 mb-2 md:mb-4">
         Payment Info
       </h3>
       <div>
         <form>
           <section>
-            <h4 className="font-semibold text-[28px] leading-6 font-fontPrimary text-[#262626] mt-8 mb-6">
+            <h4 className="font-semibold text-2xl sm:text-[28px] leading-6 font-fontPrimary text-[#262626] mt-4 md:mt-8 mb-4 md:mb-6">
               Payment Method
             </h4>
-            <div className="ml-8 space-y-3">
+            <div className="ml-4 sm:ml-8 space-y-3">
               <div>
                 <input type="radio" name="payment" id="creditCard" />
                 <label className="ml-4 font-semibold text-xl leading-6 font-fontPrimary text-[#262626]">
@@ -33,9 +33,9 @@ const PaymentInfo = () => {
               </div>
             </div>
           </section>
-          <section className="mt-12 mb-12">
-            <div className="flex flex-col gap-y-4 mb-8">
-              <label className="text-2xl leading-5 font-medium font-fontPrimary text-[#737373]">
+          <section className="my-8 sm:my-12">
+            <div className="flex flex-col gap-y-4 mb-4 md:mb-8">
+              <label className="text-xl md:text-2xl leading-5 font-medium font-fontPrimary text-[#737373]">
                 Card Number
               </label>
               <input
@@ -45,9 +45,9 @@ const PaymentInfo = () => {
                 maxLength={16}
               />
             </div>
-            <div className="flex justify-between mb-8">
+            <div className="flex sm:flex-row flex-col gap-y-4 justify-between mb-8">
               <div className="flex flex-col gap-y-4">
-                <label className="text-2xl leading-5 font-medium font-fontPrimary text-[#737373]">
+                <label className="text-xl md:text-2xl leading-5 font-medium font-fontPrimary text-[#737373]">
                   Expiry Date
                 </label>
                 <input
@@ -58,7 +58,7 @@ const PaymentInfo = () => {
                 />
               </div>
               <div className="flex flex-col gap-y-4">
-                <label className="text-2xl leading-5 font-medium font-fontPrimary text-[#737373]">
+                <label className="text-xl md:text-2xl leading-5 font-medium font-fontPrimary text-[#737373]">
                   CVV
                 </label>
                 <input

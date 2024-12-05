@@ -1,4 +1,5 @@
 import React from "react";
+
 import SingleProduct from "../../home/components/SingleProduct";
 import image1 from "/IMAGES/jalabiya1.png";
 import image2 from "/IMAGES/jalabiya2.png";
@@ -32,10 +33,10 @@ const FilteredProducts = () => {
   };
   const shuffledProducts = shuffleArray(products).slice(0, 9);
   return (
-    <section className="flex-[0.8] w-full">
+    <section className="w-full">
       <section
-        className="grid gap-x-6 gap-y-12"
-        style={{ gridTemplateColumns: "repeat(auto-fit, minmax(330px, 1fr))" }}
+        className="grid gap-x-6 gap-y-12 grid-container"
+        style={{ gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))" }}
       >
         {shuffledProducts.map((product, index) => (
           <SingleProduct
