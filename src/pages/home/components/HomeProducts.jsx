@@ -36,10 +36,7 @@ const HomeProducts = ({ header, Home = true }) => {
           {header}
         </p>
       </div>
-      <section
-        className="grid gap-x-6 gap-y-12"
-        style={{ gridTemplateColumns: "repeat(auto-fit, minmax(330px, 1fr))" }}
-      >
+      <section className="grid gap-x-6 gap-y-12 grid-container">
         {header
           ? todaysDeal.map((product, index) => (
               <SingleProduct

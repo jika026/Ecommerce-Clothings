@@ -30,9 +30,7 @@ const Products = () => {
         <div className="hidden md:block">
           <ProductSideBar />
         </div>
-        <div>
-          <FilteredProducts />
-        </div>
+        <FilteredProducts />
       </div>
     </div>
   );

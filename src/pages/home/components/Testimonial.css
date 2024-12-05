@@ -6,3 +6,19 @@
   border-radius: 64px;
   background-image: linear-gradient(to right, #f30202, #f97a05);
 }
+
+.testimonialRemarks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+@media (min-width: 360px) {
+  .bannerContainer {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  }
+}
+@media (min-width: 568px) {
+  .testimonialRemarks {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}

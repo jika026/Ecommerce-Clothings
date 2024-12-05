@@ -3,7 +3,7 @@ import "./Testimonial.css";
 
 const Testimonials = () => {
   return (
-    <section className="m-16">
+    <section className="m-4 sm:m-8 md:m-16">
       <h1
         className="font-fontPrimary text-center leading-8 mb-10"
         style={{
@@ -14,12 +14,7 @@ const Testimonials = () => {
         Who We Are
       </h1>
       <section className="grid gap-5 mt-2 mb-[60px]">
-        <div
-          className="grid gap-y-8 gap-x-5"
-          style={{
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          }}
-        >
+        <div className="grid gap-y-8 gap-x-5 testimonialRemarks">
           <div>
             <div className="blog-banner">
               <img
@@ -29,7 +24,7 @@ const Testimonials = () => {
               />
             </div>
             <div className="blog-content my-4 mx-[0.335rem] flex gap-x-3  items-center">
-              <p className="text-[36px] leading-[43.57px] font-medium font-fontPrimary">
+              <p className="text-2xl leading-6 md:text-[36px] md:leading-[43.57px] font-medium font-fontPrimary">
                 Our Commitment
               </p>
             </div>
@@ -48,7 +43,7 @@ const Testimonials = () => {
               />
             </div>
             <div className="blog-content my-4 mx-[0.335rem] flex gap-x-3  items-center">
-              <p className="text-[36px] leading-[43.57px] font-medium font-fontPrimary ">
+              <p className="text-2xl leading-6 md:text-[36px] md:leading-[43.57px] font-medium font-fontPrimary ">
                 Our Mission
               </p>
             </div>
@@ -69,7 +64,7 @@ const Testimonials = () => {
               />
             </div>
             <div className="blog-content my-4 mx-[0.335rem] flex gap-x-3  items-center">
-              <p className="text-[36px] leading-[43.57px] font-medium font-fontPrimary ">
+              <p className="text-2xl leading-6 md:text-[36px] md:leading-[43.57px] font-medium font-fontPrimary ">
                 For the Community
               </p>
             </div>

@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <div id="content">
       <Hero />
-      <section className="products mt-8 md:mt-[3.875rem] mx-8 md:mx-16 mb-6 grid gap-[14px]">
+      <section className="products mt-8 md:mt-[3.875rem] mx-4 sm:mx-8 md:mx-16 mb-6 grid gap-[14px]">
         <HomeProducts header="Today's Deal" />
         <Banners />
         <HomeProducts header="Trending Products" />
