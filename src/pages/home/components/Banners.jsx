@@ -16,7 +16,7 @@ const Banners = () => {
           className="w-full h-full"
         />
         <div className="px-8 absolute top-[25%] sm:top-[30%] lg:top-[40%]  flex flex-col items-center right-[0vmax]">
-          <p style={textStyles} className="leading-[80.16px]  mlgd:mb-4">
+          <p style={textStyles} className="leading-[80.16px]  lg:mb-4">
             ONGOING SALES
           </p>
           <button className="font-fontPrimary font-semibold text-sm border-[1px] border-black px-14 py-3 bg-transparent rounded">
