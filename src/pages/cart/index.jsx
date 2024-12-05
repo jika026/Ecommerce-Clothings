@@ -1,14 +1,9 @@
 import React from "react";
 import PaymentInfo from "./components/PaymentInfo";
 import CartListing from "./components/CartListing";
-import { useNavigate } from "react-router-dom";
+import BackButton from "../../components/BackButton";
 
 const Cart = () => {
-  const navigate = useNavigate();
-
-  const goBack = () => {
-    navigate(-1);
-  };
   return (
     <div>
       <div
@@ -19,13 +14,7 @@ const Cart = () => {
           Shopping Cart
         </h3>
       </div>
-      <div
-        className="flex gap-x-2 items-center text-[28px] leading-6 font-fontPrimary my-6 mx-16"
-        onClick={goBack}
-      >
-        <i className="fa-solid fa-caret-left"></i>
-        <p>Back</p>
-      </div>
+      <BackButton />
       <div className="flex xl:flex-row flex-col mx-4 sm:mx-8 md:mx-16 gap-12">
         <CartListing />
         <PaymentInfo />

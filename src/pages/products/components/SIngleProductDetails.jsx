@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import SingleProduct from "../../home/components/SingleProduct";
 import "./SingleProductDetails.css";
 import RatingChart from "./RatingChart";
@@ -9,6 +8,7 @@ import image3 from "/IMAGES/abaya1.webp";
 import image4 from "/IMAGES/abaya2.webp";
 import image5 from "/IMAGES/abaya3.webp";
 import image6 from "/IMAGES/abaya4.webp";
+import BackButton from "../../../components/BackButton";
 
 const products = [
   { image: image1, title: "ABAYA", price: 150.0 },
@@ -76,10 +76,7 @@ const userReviews = [
 const SingleProductDetails = () => {
   const [activeTab, setActiveTab] = useState("");
   const [quantity, setQuantity] = useState(0);
-  const navigate = useNavigate();
-  const goBack = () => {
-    navigate(-1);
-  };
+
   const shuffleProducts = (array) => {
     const shuffled = [...array];
     for (let i = shuffled.length - 1; i > 0; i--) {
@@ -236,13 +233,7 @@ const SingleProductDetails = () => {
             Products/PRODUCT
           </h3>
         </div>
-        <div
-          className="flex gap-x-2 items-center text-[28px] leading-6 font-fontPrimary my-6 mx-16"
-          onClick={goBack}
-        >
-          <i className="fa-solid fa-caret-left"></i>
-          <p>Back</p>
-        </div>
+        <BackButton />
         <div className="flex gap-x-6 mx-16 ">
           <section id="product-image " className="w-[40%]">
             <div className="main-image mb-12">

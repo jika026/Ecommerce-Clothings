@@ -2,7 +2,7 @@ import React from "react";
 
 const SingleProduct = ({ image, title, price, Home }) => {
   return (
-    <div className="flex flex-col bg-gray-100 px-2 sm:px-4 md:px-6 pt-6 pb-3 rounded-2xl shadow-lg justify-between h-auto">
+    <div className="flex flex-col bg-gray-100 px-2 sm:px-4 md:px-6 pt-6 pb-3 rounded-2xl shadow-md justify-between h-auto">
       <div className="self-center py-4 flex justify-center items-center w-full h-[50vw] sm:h-[40vw] md:h-[30vw] lg:h-[25vw]">
         <img
           src={image}
@@ -24,7 +24,7 @@ const SingleProduct = ({ image, title, price, Home }) => {
         <button
           className={`font-fontPrimary mt-4 md:mt-0 font-medium text-sm md:text-lg px-4 w-[160px] md:w-[203px] h-[56px] border-2 rounded-lg transition-all ${
             Home
-              ? "border-[#FF360A] text-orange-500 hover:border-[#FF360A] hover:text-white"
+              ? "border-[#FF360A] text-orange-500 hover:border-[#FF360A] hover:scale-95"
               : "border-black text-black hover:bg-black hover:text-white"
           }`}
         >
