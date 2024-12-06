@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./TopBar.css";
 import { ROUTES } from "../routes";
 
-const TopBar = () => {
+const TopBar = ({ ref }) => {
+  const [noOfItemsInCart, setNoOfItemsInCart] = useState(0);
   const dropDownMenuRef = useRef(null);
 
   const hamburgerClick = () => {
@@ -22,6 +23,7 @@ const TopBar = () => {
           className="fa-solid fa-bars hamburger text-3xl"
           id="hamburger"
           onClick={hamburgerClick}
+          ref={ref}
         ></i>
       </div>
       <nav
@@ -85,8 +87,10 @@ const TopBar = () => {
             <Link to={ROUTES.SHOPPING_CART}>
               <i className="fa-solid fa-cart-shopping text-2xl"></i>
             </Link>
-            <div className="absolute top-0 left-3/4 w-[10px] h-[10px] rounded-[50%] bg-[#fe0c0c] flex justify-center items-center p-[2px]">
-              <p className="text-[8px] font-bold font-serif text-white">0</p>
+            <div className="absolute top-0 left-3/4 min-w-[15px] min-h-[10px]  rounded-[50%] bg-[#fe0c0c] flex justify-center items-center p-[2px]">
+              <p className="text-[8px] font-bold font-serif text-white">
+                {noOfItemsInCart}
+              </p>
             </div>
           </div>
           <i className="fa-solid fa-arrow-right-from-bracket text-2xl"></i>

@@ -7,7 +7,7 @@ const Subscription = () => {
   return (
     <section className="my-12 mx-4 sm:mx-8 md:mx-16">
       <div
-        className="h-[536px] rounded-[32px] md:rounded-[64px] flex flex-col justify-center items-center text-center bg-cover bg-center"
+        className="h-[536px] rounded-3xl sm:rounded-[32px] md:rounded-[64px] flex flex-col justify-center items-center text-center bg-cover bg-center"
         style={{ backgroundImage: `url("/IMAGES/subscriptionBanner.png")` }}
       >
         <p

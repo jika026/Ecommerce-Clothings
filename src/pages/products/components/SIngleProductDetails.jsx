@@ -2,22 +2,34 @@ import React, { useState } from "react";
 import SingleProduct from "../../home/components/SingleProduct";
 import "./SingleProductDetails.css";
 import RatingChart from "./RatingChart";
-import image1 from "/IMAGES/jalabiya1.png";
-import image2 from "/IMAGES/jalabiya2.png";
-import image3 from "/IMAGES/abaya1.webp";
-import image4 from "/IMAGES/abaya2.webp";
-import image5 from "/IMAGES/abaya3.webp";
-import image6 from "/IMAGES/abaya4.webp";
-import BackButton from "../../../components/BackButton";
+import jalabiya1 from "/IMAGES/jalabiya1.png";
+import jalabiya2 from "/IMAGES/jalabiya2.png";
+import jalabiya3 from "/IMAGES/jalabiya3.png";
+import jalabiya4 from "/IMAGES/jalabiya4.png";
+import abaya1 from "/IMAGES/abaya1.webp";
+import abaya2 from "/IMAGES/abaya2.webp";
+import abaya3 from "/IMAGES/abaya3.webp";
+import abaya4 from "/IMAGES/abaya4.webp";
+import bespokeDress1 from "/IMAGES/bespokeDress1.png";
+import bespokeDress2 from "/IMAGES/bespokeDress2.png";
+import veil1 from "/IMAGES/veil1.png";
+import veil2 from "/IMAGES/veil2.png";
 
 const products = [
-  { image: image1, title: "ABAYA", price: 150.0 },
-  { image: image2, title: "ABAYA", price: 150.0 },
-  { image: image3, title: "JALABIYA", price: 50.0 },
-  { image: image4, title: "VEIL", price: 9.99 },
-  { image: image5, title: "VEIL", price: 9.99 },
-  { image: image6, title: "BESPOKE DRESS", price: 500.0 },
+  { image: jalabiya1, title: "JALABIYA", price: 50.0 },
+  { image: jalabiya2, title: "JALABIYA", price: 50.0 },
+  { image: jalabiya3, title: "JALABIYA", price: 50.0 },
+  { image: jalabiya4, title: "JALABIYA", price: 50.0 },
+  { image: abaya1, title: "ABAYA", price: 150.0 },
+  { image: abaya2, title: "ABAYA", price: 150.0 },
+  { image: abaya3, title: "ABAYA", price: 150.0 },
+  { image: abaya4, title: "ABAYA", price: 150.0 },
+  { image: veil1, title: "VEIL", price: 9.99 },
+  { image: veil2, title: "VEIL", price: 9.99 },
+  { image: bespokeDress1, title: "BESPOKE DRESS", price: 500.0 },
+  { image: bespokeDress2, title: "BESPOKE DRESS", price: 500.0 },
 ];
+
 const tabs = [
   { id: "description", label: "Description" },
   { id: "info", label: "Additional Information" },
