@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./TopBar.css";
 import { ROUTES } from "../routes";
 
-const TopBar = ({ ref }) => {
+const TopBar = () => {
   const [noOfItemsInCart, setNoOfItemsInCart] = useState(0);
   const dropDownMenuRef = useRef(null);
 
@@ -15,7 +15,7 @@ const TopBar = ({ ref }) => {
 
   return (
     <header
-      className="topBarHeader flex justify-between items-center px-6 md:px-10 bg-white fixed h-[84px] w-full z-[1000]"
+      className="topBarHeader flex justify-between items-center px-2 sm:px-6 md:px-10 bg-white fixed h-[84px] w-full z-[1000]"
       style={{ boxShadow: "0 0 10px 0 #000" }}
     >
       <div className="hover:cursor-pointer">
@@ -23,13 +23,12 @@ const TopBar = ({ ref }) => {
           className="fa-solid fa-bars hamburger text-3xl"
           id="hamburger"
           onClick={hamburgerClick}
-          ref={ref}
         ></i>
       </div>
       <nav
         ref={dropDownMenuRef}
         id="dropDownMenu"
-        className={`h-[300px] sm:h-[350px] w-[230px] sm:w-[300px] flex-col justify-between px-6 pt-4 pb-8 z-[1001] absolute top-[83px] left-6 bg-white`}
+        className={`h-[300px] sm:h-[350px] w-[230px] sm:w-[300px] flex-col justify-between px-4 sm:px-6 pt-2 sm:pt-4 pb-4 sm:pb-8 z-[1001] absolute top-[83px] left-2 sm:left-6 bg-white`}
       >
         <ul className="flex flex-col gap-y-2">
           <li className="text-[22px] cursor-pointer list-none font-serif">
@@ -68,15 +67,15 @@ const TopBar = ({ ref }) => {
           </div>
         </div>
       </nav>
-      <div className="max-w-[130px] ">
+      <div className="max-w-[130px]">
         <Link to={ROUTES.HOME}>
           <img src="/IMAGES/logo/mainLogo.svg" alt="LOGO" className="w-full" />
         </Link>
       </div>
-      <div className="info flex items-center gap-x-8 md:gap-x-12">
+      <div className="info flex items-center gap-x-4 sm:gap-x-8 md:gap-x-12">
         <input
           type="text"
-          className="w-[160px] md:w-[280px] h-[32px] lg:w-[342px] lg:h-[45px] rounded-2xl p-2 outline-none border-none bg-[#f1f1f1]"
+          className="w-[160px] md:w-[280px] h-[32px] lg:w-[342px] lg:h-[45px] rounded-2xl p-2 outline-none border-none bg-[#f1f1f1] ml-2"
           placeholder="Search"
         />
         <div className="flex gap-x-4 items-center">

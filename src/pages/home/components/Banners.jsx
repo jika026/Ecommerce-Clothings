@@ -18,7 +18,7 @@ const Banners = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="flex flex-col items-end justify-center h-full px-8 ">
+        <div className="flex flex-col justify-center h-full px-8 w-max float-right">
           <p
             style={textStyles}
             className="leading-[32px] text-center sm:leading-[80.16px] lg:mb-4 text-black"

@@ -13,7 +13,7 @@ const Hero = () => {
 
   return (
     <section
-      className="h-screen bg-cover bg-no-repeat bg-center"
+      className="h-[60vh] sm:h-[70vh] md:h-[85vh] lg:h-screen bg-cover bg-no-repeat bg-center"
       style={{
         backgroundImage: `url("/IMAGES/heroBanner.png")`,
         backgroundColor: "#404040",

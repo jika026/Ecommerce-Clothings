@@ -5,10 +5,9 @@ import TopBar from "./TopBar";
 import Qualities from "./Qualities";
 
 const AppLayout = () => {
-  const ref = useRef();
   return (
     <>
-      <TopBar ref={ref} />
+      <TopBar />
       <main>
         <Outlet />
       </main>

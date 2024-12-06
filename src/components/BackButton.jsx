@@ -9,7 +9,7 @@ const BackButton = () => {
   };
   return (
     <div
-      className="flex gap-x-2 items-center text-[28px] leading-6 font-fontPrimary my-6 mx-16 w-max cursor-pointer"
+      className="flex gap-x-2 items-center text-[28px] leading-6 font-fontPrimary my-6 mx-4 sm:mx-8 md:mx-16 w-max cursor-pointer"
       onClick={goBack}
     >
       <i className="fa-solid fa-caret-left"></i>

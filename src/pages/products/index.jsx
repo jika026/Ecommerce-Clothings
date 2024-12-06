@@ -15,7 +15,7 @@ const Products = () => {
         </h3>
       </div>
       <BackButton />
-      <div className="flex mx-8 md:mx-16 gap-x-12">
+      <div className="flex mx-4 sm:mx-8 md:mx-16 gap-x-12">
         <div className="hidden md:block">
           <ProductSideBar />
         </div>

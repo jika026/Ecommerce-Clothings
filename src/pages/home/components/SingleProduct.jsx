@@ -12,8 +12,8 @@ const SingleProduct = ({ image, title, price, Home }) => {
       </div>
 
       <div className="flex flex-row justify-between items-center pt-3 w-full">
-        <div className="text-center md:text-left truncate">
-          <h3 className="font-normal truncate text-2xl md:text-4xl  w-max leading-[28px] font-fontSecondary">
+        <div className="truncate">
+          <h3 className="font-normal truncate text-xl sm:text-2xl md:text-4xl  w-max leading-[28px] font-fontSecondary">
             {title}
           </h3>
           <p className="font-normal text-xl md:text-2xl xl:text-3xl md:leading-[24px] font-fontSecondary">
@@ -22,13 +22,14 @@ const SingleProduct = ({ image, title, price, Home }) => {
         </div>
 
         <button
-          className={`font-fontPrimary mt-4 md:mt-0 font-medium text-sm md:text-lg px-4 w-[160px] md:w-[203px] h-[56px] border-2 rounded-lg transition-all ${
-            Home
-              ? "border-[#FF360A] text-orange-500 hover:border-[#FF360A] hover:scale-95"
-              : "border-black text-black hover:bg-black hover:text-white"
-          }`}
+          className={`font-fontPrimary font-medium text-sm md:text-lg px-4 h-[42px] w-[
+           120px] sm:w-[160px] md:w-[203px] md:h-[56px] border-2 rounded-lg transition-all ${
+             Home
+               ? "border-[#FF360A] text-orange-500 hover:border-[#FF360A] hover:scale-95"
+               : "border-black text-black hover:bg-black hover:text-white"
+           }`}
         >
-          Buy Now
+          <p className="w-max mx-auto">Buy Now</p>
         </button>
       </div>
     </div>

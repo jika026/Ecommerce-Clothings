@@ -1,17 +1,17 @@
 import React from "react";
 import SingleProduct from "../../home/components/SingleProduct";
-import jalabiya1 from "/IMAGES/jalabiya1.png";
-import jalabiya2 from "/IMAGES/jalabiya2.png";
-import jalabiya3 from "/IMAGES/jalabiya3.png";
-import jalabiya4 from "/IMAGES/jalabiya4.png";
-import abaya1 from "/IMAGES/abaya1.webp";
-import abaya2 from "/IMAGES/abaya2.webp";
-import abaya3 from "/IMAGES/abaya3.webp";
-import abaya4 from "/IMAGES/abaya4.webp";
-import bespokeDress1 from "/IMAGES/bespokeDress1.png";
-import bespokeDress2 from "/IMAGES/bespokeDress2.png";
-import veil1 from "/IMAGES/veil1.png";
-import veil2 from "/IMAGES/veil2.png";
+import jalabiya1 from "/IMAGES/products/jalabiya1.png";
+import jalabiya2 from "/IMAGES/products/jalabiya2.png";
+import jalabiya3 from "/IMAGES/products/jalabiya3.png";
+import jalabiya4 from "/IMAGES/products/jalabiya4.png";
+import abaya2 from "/IMAGES/products/abaya2.webp";
+import abaya1 from "/IMAGES/products/abaya1.webp";
+import abaya3 from "/IMAGES/products/abaya3.webp";
+import abaya4 from "/IMAGES/products/abaya4.webp";
+import bespokeDress1 from "/IMAGES/products/bespokeDress1.png";
+import bespokeDress2 from "/IMAGES/products/bespokeDress2.png";
+import veil1 from "/IMAGES/products/veil1.png";
+import veil2 from "/IMAGES/products/veil2.png";
 
 const products = [
   { image: jalabiya1, title: "JALABIYA", price: 50.0 },
@@ -41,7 +41,7 @@ const FilteredProducts = () => {
   return (
     <section className="w-full">
       <section
-        className="grid gap-x-6 gap-y-12 grid-container"
+        className="grid gap-x-6 gap-y-6 md:gap-y-12 grid-container"
         style={{ gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))" }}
       >
         {shuffledProducts.map((product, index) => (
