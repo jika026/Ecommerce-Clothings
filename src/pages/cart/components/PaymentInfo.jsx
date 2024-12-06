@@ -7,7 +7,7 @@ const PaymentInfo = () => {
         Payment Info
       </h3>
       <div>
-        <form>
+        <form className="flex flex-col">
           <section>
             <h4 className="font-semibold text-2xl sm:text-[28px] leading-6 font-fontPrimary text-[#262626] mt-4 md:mt-8 mb-4 md:mb-6">
               Payment Method
@@ -34,7 +34,7 @@ const PaymentInfo = () => {
             </div>
           </section>
           <section className="my-8 sm:my-12">
-            <div className="flex flex-col gap-y-4 mb-4 md:mb-8">
+            <div className="flex flex-col gap-y-4 mb-4 md:mb-8 max-w-[500px]">
               <label className="text-xl md:text-2xl leading-5 font-medium font-fontPrimary text-[#737373]">
                 Card Number
               </label>
@@ -70,7 +70,7 @@ const PaymentInfo = () => {
               </div>
             </div>
           </section>
-          <button className="font-fontPrimary font-medium text-lg leading-4 border-[1px] border-[#FF360A] px-[16px] py-[20px] rounded-lg w-full h-[56px] ">
+          <button className="font-fontPrimary font-medium text-lg leading-4 border-[1px] border-[#FF360A] px-[16px] py-[20px] rounded-lg w-full max-w-[230px] h-[56px] self-center">
             Check Out
           </button>
         </form>

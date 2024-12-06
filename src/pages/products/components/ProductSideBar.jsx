@@ -20,14 +20,14 @@ const ProductSideBar = () => {
     "Male Cap",
   ];
   return (
-    <div className="flex-[0.20] space-y-8 h-screen">
+    <div className="flex-[0.20] space-y-8 h-screen mb-8">
       <div>
         <h2 className="font-semibold text-4xl leading-8 font-fontPrimary mb-6">
           Filter Option
         </h2>
-        <div className="rounded-2xl p-8 border-[1px] border-[#a6a6a6]">
+        <div className="rounded-2xl md:p-8 md:border-[1px] md:border-[#a6a6a6]">
           <h3 className="font-medium text-[28px] leading-6 mb-4">Category</h3>
-          <form className="flex flex-col gap-y-4">
+          <form className="flex md:flex-col overflow-x-scroll gap-y-4 gap-x-2">
             {productFilterOptions.map((productFilterOption, index) => (
               <FilterOptions
                 key={index}
@@ -44,14 +44,14 @@ const ProductSideBar = () => {
           Price Range
         </h2>
         <div className="flex flex-col items-center">
-          <div className=" w-80 self-center">
+          <div className="max-w-80 w-full self-center">
             <input
               type="range"
               min="0"
               max="100"
               value={value}
               onChange={handleInputChange}
-              className="mt-4 w-80 appearance-none focus:outline-none"
+              className="mt-4 w-full appearance-none focus:outline-none"
               style={{
                 background: `linear-gradient(to right, orange ${value}%, #ddd ${value}%)`,
               }}

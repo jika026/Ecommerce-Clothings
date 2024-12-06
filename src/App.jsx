@@ -20,7 +20,7 @@ function App() {
     <UserEmailProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<AppLayout />}>
+          <Route element={<AppLayout />}>
             <Route path={ROUTES.HOME} element={<Home />} />
             <Route path={ROUTES.PRODUCTS} element={<Products />} />
             <Route

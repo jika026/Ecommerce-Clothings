@@ -1,12 +1,75 @@
 import React, { useState } from "react";
 
+import jalabiya1 from "/IMAGES/products/jalabiya1.png";
+import jalabiya2 from "/IMAGES/products/jalabiya2.png";
+import jalabiya3 from "/IMAGES/products/jalabiya3.png";
+import jalabiya4 from "/IMAGES/products/jalabiya4.png";
+import abaya2 from "/IMAGES/products/abaya2.webp";
+import abaya1 from "/IMAGES/products/abaya1.webp";
+import abaya3 from "/IMAGES/products/abaya3.webp";
+import abaya4 from "/IMAGES/products/abaya4.webp";
+import bespokeDress1 from "/IMAGES/products/bespokeDress1.png";
+import bespokeDress2 from "/IMAGES/products/bespokeDress2.png";
+import veil1 from "/IMAGES/products/veil1.png";
+import veil2 from "/IMAGES/products/veil2.png";
+
+const products = [
+  // {
+  //   image: jalabiya1,
+  //   title: "JALABIYA",
+  //   price: 50.0,
+  //   title: "Egytian Jalabiya 1",
+  // },
+  // {
+  //   image: jalabiya2,
+  //   title: "JALABIYA",
+  //   price: 50.0,
+  //   title: "Egytian Jalabiya 2",
+  // },
+  // {
+  //   image: jalabiya3,
+  //   title: "JALABIYA",
+  //   price: 50.0,
+  //   title: "Egytian Jalabiya 3",
+  // },
+  // {
+  //   image: jalabiya4,
+  //   title: "JALABIYA",
+  //   price: 50.0,
+  //   title: "Egytian Jalabiya 4",
+  // },
+  { image: abaya1, title: "ABAYA", price: 150.0, title: "Dubai Abaya 1" },
+  { image: abaya2, title: "ABAYA", price: 150.0, title: "Dubai Abaya 2" },
+  { image: abaya3, title: "ABAYA", price: 150.0, title: "Dubai Abaya 3" },
+  { image: abaya4, title: "ABAYA", price: 150.0, title: "Dubai Abaya 4" },
+  // { image: veil1, title: "VEIL", price: 9.99, title: "Arabian Veil 1" },
+  // { image: veil2, title: "VEIL", price: 9.99, title: "Arabian Veil 1" },
+  // {
+  //   image: bespokeDress1,
+  //   title: "BESPOKE DRESS",
+  //   price: 500.0,
+  //   title: "Moroccan Bespoke 1",
+  // },
+  // {
+  //   image: bespokeDress2,
+  //   title: "BESPOKE DRESS",
+  //   price: 500.0,
+  //   title: "Moroccan Bespoke 1",
+  // },
+];
+
 const CartListing = () => {
-  const items = [
-    { image: "/IMAGES/abayaThree.webp", title: "Dubai Abaya 1", price: 150.0 },
-    { image: "/IMAGES/abaya3.webp", title: "Dubai Abaya 2", price: 120.0 },
-    { image: "/IMAGES/abayaTwo.webp", title: "Dubai Abaya 3", price: 170.0 },
-    { image: "/IMAGES/abaya1.webp", title: "Dubai Abaya 4", price: 250.0 },
-  ];
+  const shuffleProducts = (array) => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
+
+  // const items = shuffleProducts(products).slice(0, 4);
+  const items = [...products];
   const [subtotals, setSubtotals] = useState(Array(items.length).fill(0));
 
   // Function to update individual subtotals
@@ -25,11 +88,11 @@ const CartListing = () => {
   );
 
   return (
-    <div className="flex-[0.8] rounded-3xl bg-[#fcfcfc]  overflow-scroll">
+    <div className="flex-[0.8] rounded-3xl bg-[#fcfcfc]  overflow-x-scroll">
       <table className="w-full">
         <thead>
           <tr className="border-b-[1px] border-[#000]">
-            <th className="font-fontPrimary text-[28px] leading-6 uppercase font-normal pt-12 pb-2 text-center">
+            <th className="font-fontPrimary text-[28px] leading-6 uppercase font-normal pt-12 pb-2 text-start pl-12">
               product
             </th>
             <th className="font-fontPrimary text-[28px] leading-6 uppercase font-normal pt-12 pb-2 text-center">
